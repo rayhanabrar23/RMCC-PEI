@@ -328,7 +328,7 @@ def process_and_style_conc_limit(file_buffer):
         )
         
         # Finalisasi kolom
-        df['KETERANGAN UMA'] = df['TANGGAL UMA'].apply(keterangan_uma)
+        df['KETERANGAN UMA'] = df['UMA'].apply(keterangan_uma)
         
         FINAL_COLS = [
             'KODE EFEK', 'NAMA EFEK', 'HAIRCUT KPEI LAMA', 'HAIRCUT KPEI BARU', 'HAIRCUT PEI USULAN DIVISI',
@@ -336,7 +336,7 @@ def process_and_style_conc_limit(file_buffer):
             'PERBANDINGAN DENGAN LISTED SHARES (Sesuai Perhitungan)',
             'PERBANDINGAN DENGAN FREE FLOAT (Sesuai Perhitungan)',
             COL_PERHITUNGAN, 'CONCENTRATION LIMIT KARENA SAHAM MARJIN BARU',
-            COL_LISTED, COL_FF, COL_RMCC, 'SAHAM MARJIN BARU?', 'TANGGAL UMA',
+            COL_LISTED, COL_FF, COL_RMCC, 'SAHAM MARJIN BARU?', 'UMA',
             'KETERANGAN', 'KETERANGAN UMA'
         ]
         
